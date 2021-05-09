@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{>header}}
+      <link rel="stylesheet" href="css/style.css">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                                        
+</head>
+<body>
+    
+    <!---- Title Bare---->
+
+    {{>navbar}}
+    
+    <!---- body ---->
+
+        <div class="containter-fluid main_header">
+            <div class="row">
+                <div class="col-md-11 col-12 mx-auto">
+                    <div class="main_cont">
+                        <form class="tp_form">
+                            <input type="text" id="city" placeholder="Enter Your City Name" autocomplete="off">
+                            <input type="submit" value="Search" id="Submit">
+                        </form>
+                    </div>
+                    <div class="tp_info">
+                        <div class="top_layer">
+                            <p id="day">Day</p>
+                            <p id="date">Date</p>
+                        </div>
+                        <div class="main_layer">
+                            <div id="main_layerr">
+                                <p id="city_name">City Name</p>
+                                <div class="Stet datahide">
+                                    <p id ="stet">sono</p>
+                                </div>
+                            </div>
+                            <div class="mid_layer">
+                                <p><span id="temp">0</span><sup>o</sup>C</p>
+                                <p id="temp_s">
+                                    <lottie-player src="https://assets6.lottiefiles.com/datafiles/kr7vxsZXeUCocfV/data.json"  background="transparent"  speed="1"  style="width: 120px; height: 120px;"  loop  autoplay></lottie-player>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+
+        {{>footer}}
+
+        <!-- Script -->
+
+        <script src="js/main.js"></script>
+
+        <!-- Day Time And Date -->
+
+        <script>
+
+
+            let now = new Date();
+
+
+            function gateDate(){
+                let mo = ["January", "February", "March", "April", "May", "June", 
+                            "July", "August","September","October","November","December"];
+                
+                month = mo[now.getMonth()];
+                daten = now.getDate();
+                year = now.getFullYear();
+
+                let datenn = document.getElementById('date');
+
+                datenn.innerText = `${daten}-${month}-${year}`;
+            }
+
+
+            function gateDay(){
+                
+                let wday = ['Sunday', "Monday", "Tuesday", "Wednesday", "Thusday", "Friday", "Saturdau"] ;
+                
+                days = wday[now.getDay()];
+                
+                let day = document.getElementById('day');
+                
+                day.innerText = days;
+            }
+
+            gateDay();
+            gateDate();
+
+        </script>
+</body>
+</html>

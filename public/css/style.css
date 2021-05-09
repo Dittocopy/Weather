@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto_Slab', serif;
+}
+
+:root{
+    --main-bg:#1e272e;
+    --main-color:#0097e6;
+}
+
+html{
+    font-size: 62%;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* ------ Navbar ------ */
+
+.row{
+    margin: 0;
+}
+.main_menu{
+    background-color: var(--main-bg);
+}
+
+.navbar{
+    color: #fff;
+    background-color: var(--main-bg);
+}
+
+.navbar-brand{
+    font-size: 2.6rem;
+    color: #fff;
+}
+
+.navbar-brand:hover{
+    color: #fff;
+}
+
+.navbar-toggler{
+    background-color: #fff;
+}
+
+.nav-link{
+    font-size: 1.4rem;
+    margin-left: 2.8rem;
+    color: #fff;
+}
+
+.logosvg{
+    height: 3.8rem;
+    width: 3.8rem;
+}
+
+.navbar .nav-link:hover{
+    color: #3182F6;
+}
+
+/* ------ Body ------ */
+
+.main_header_right{
+    height: 55rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+.main_header_left{
+    height: 55rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+.main_header_left p{
+    font-size: 2rem;
+}
+
+.main_header_left h1{
+    font-size: 3rem;
+    text-align: left;
+}
+
+.main_header_left .weathertext{
+    color: #3182F6;
+}
+
+.main_header_left button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    outline: none;
+    box-shadow: 0 8px 6px -6px #000;
+}
+
+.main_header_left button:hover{
+    box-shadow: 0 8px 6px -6px var(--main-color);    
+}
+
+figure{
+    filter: drop-shadow(1.5rem 1.8rem 2rem #000);
+}
+
+/*------- Weather ------*/
+
+
+.tp_form{
+    width: 60%;
+    position: relative;
+    margin: 8rem auto 6rem;
+}
+
+.tp_form input[type="text"]{
+    width: 100%;
+    padding: 1rem 0.5rem 1rem 1.5rem;
+    background: #1e202b;
+    border-color: #1e202b;
+    border-width: 0.5rem;
+    border-style: solid;
+    color: #fff;
+    outline: none;
+    border-radius: 4rem;
+    font-size: 1.5rem;
+}
+
+::placeholder{
+    color:  #d9d9d9;
+}
+
+.tp_form input[type="text"]:focus{
+    border-color: #3182F6;
+}
+
+.tp_form input[type="submit"]{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    border: none;
+    background: #3182F6;
+    padding: 0 3rem;
+    border-radius: 3rem;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.tp_form input[type="submit"]:hover{
+    color: #3182F6;
+    background: #fff;
+}
+
+
+.tp_info{
+    width: 50rem;
+    font-size: 2.5rem;
+    margin: auto;
+    background-color: #323544;
+    border-radius: 1rem;
+    font-family: 'Roboto_Slab', serif;
+}
+
+.top_layer{
+    width: 100%;
+    height: 20%;
+    background-color: #2d303d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.top_layer p{
+    color: #fff;
+    font-weight: 400;
+    padding: 0.5rem 1.5rem;
+}
+
+.main_layer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.main_layer #main_layerr{
+    position: relative;
+    width: 100%;
+    display: flex;
+    color: #fff;
+    font-weight: 500;
+}
+
+.Stet{
+    position: absolute;
+    right: 0.5rem;
+}
+
+.datahide{
+    visibility: hidden;
+    transition: 0.5s linear;
+}
+
+
+.mid_layer{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    font-size: 7rem;
+    font-weight: 600;
+}
+
+
+/* ------ Footer ------ */
+
+footer{
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto;
+}
+
+footer p{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 5rem;
+    font-size: 1.4rem;
+}
+
+/* ------ Responceive code 768px ------ */
+
+@media (max-width: 768px){
+    .main_header_left{
+        height: auto;
+        margin: 5rem 0;
+    }
+
+    .main_header_right{
+        height: auto;
+        margin-top: 3rem;
+    }
+
+    .tp_form{
+        width: auto;
+    }
+    
+    .tp_info{
+        width: auto;
+    }
+}

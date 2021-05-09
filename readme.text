@@ -1,1 +1,17 @@
-  /*to run the code "nodemon src/app.js -e js,hbs"*/
+Hello Developer I am Suraj 
+
+fill free to use the code
+
+if you have any suggestions please advise me
+
+if you have any ideas for make changes in this project please do it or you can tell me
+
+/*to run the code "nodemon src/app.js -e js,hbs"*/
+
+I removed the appid from main.js file in line number 26.
+
+to make your persinol appid you can go to the website https://openweathermap.org/current
+
+thenk you.
+  
+  
